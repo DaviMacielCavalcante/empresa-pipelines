@@ -2,11 +2,11 @@ name: Template Tests
 
 on:
     workflow_call:
-        inputs:
-            app:
-                description: 'Application name'
-                required: true
-                type: string
+      inputs:
+        app:
+            description: 'Application name'
+            required: true
+            type: string
 
 jobs:
     unit-test:
