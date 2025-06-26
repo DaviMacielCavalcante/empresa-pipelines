@@ -2,11 +2,6 @@ name: Template Tests
 
 on:
     workflow_call:
-      inputs:
-        app:
-            description: 'Application name'
-            required: true
-            type: string
 
 jobs:
     unit-test:
@@ -33,13 +28,13 @@ jobs:
 
             - name: Running the tests
               run: |
-                pytest --cov=${{ inputs.app }} --cov-report=html --html=${{ inputs.app }}-test-report.html --self-contained-html
+                pytest --cov=test--cov-report=html --html=test-report.html --self-contained-html
             
             - name: Sending test results
               uses: actions/upload-artifact@v4
               with:
-                name: ${{ inputs.app }}-test-report-${{ matrix.os }}-python${{ matrix.python-version }}
-                path: ./${{ inputs.app }}-test-report.html
+                name: est-report-${{ matrix.os }}-python${{ matrix.python-version }}
+                path: ./test-report.html
               
             
 

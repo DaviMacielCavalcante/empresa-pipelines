@@ -14,8 +14,6 @@ on:
 jobs:
     unit-test:
         uses: ./.github/workflows/template-teste.yaml
-        with:
-            app: "my-app" 
 
     builder:
         runs-on: ubuntu-latest
