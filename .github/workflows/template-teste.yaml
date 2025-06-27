@@ -21,6 +21,8 @@ jobs:
                 pip install -r requirements.txt
 
             - name: Running the tests
+              env: 
+                PYTHONPATH: .
               run: |
                 pytest --cov=test--cov-report=html --html=test-report.html --self-contained-html
             
