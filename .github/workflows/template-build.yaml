@@ -81,5 +81,5 @@ jobs:
                 password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
             - name: Pushing Docker image
               run: |
-                docker push ${{ inputs.image-name }}:${{ inputs.image-tag }}
+                docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ inputs.image-name }}:${{ inputs.image-tag }}
              
