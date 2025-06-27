@@ -51,7 +51,7 @@ jobs:
               with:            
                 context: .
                 push: false
-                tags: ${{ inputs.image-name }}:${{ inputs.image-tag }}
+                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ inputs.image-name }}:${{ inputs.image-tag }}
                 outputs: type=docker,dest=/tmp/docker-image.tar
 
             - name: Uploading Docker Image
