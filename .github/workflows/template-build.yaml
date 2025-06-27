@@ -47,7 +47,7 @@ jobs:
                 context: .
                 push: false
                 tags: ${{ inputs.image-name }}:${{ inputs.image-tag }}
-                outputs: type=tar,dest=/tmp/docker-image.tar
+                outputs: type=docker,dest=/tmp/docker-image.tar
 
             - name: Uploading Docker Image
               uses: actions/upload-artifact@v4
